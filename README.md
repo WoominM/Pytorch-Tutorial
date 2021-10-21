@@ -391,7 +391,7 @@ def __init__(self, args):
         self.model.eval()
         ...
     ```
-    与训练过程类似，只是不做反向传播。<br><br>
+    与训练过程类似，只是不做反向传播操作。<br><br>
     
 + start(): 训练或测试
     ```python
