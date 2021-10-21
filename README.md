@@ -341,7 +341,6 @@ def __init__(self, args):
         self.model.train() #训练模式
         self.print_log('Training epoch: {}'.format(epoch + 1))
         train_loader = self.data_loader['train'] #加载数据提取器
-#         process = tqdm(train_loader, dynamic_ncols=True)
         process = tqdm(train_loader, ncols=100) #可视化工具
         self.adjust_learning_rate(epoch) #Scheduler
         
