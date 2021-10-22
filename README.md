@@ -10,7 +10,7 @@
     
 ### Dataset
 + Default: MNIST
-+ if you want to use ```CustomDataset.py``` , ```use_mnist = False```
++ if you want to use ```CustomDataset.py``` , ```python main.py use-mnist False```
     <br><br>
 
 ### Training & Testing
