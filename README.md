@@ -487,7 +487,7 @@ class Processor():
             loss.backward() #反向传播得到梯度
             self.optimizer.step() #通过梯度下降法执行参数更新
     ```
-    如果想保存模型，通过```model.state_dict()提取权重，并使用```torch.save(weights, dir)```保存。
+    如果想保存模型，通过```model.state_dict()```提取权重，并使用```torch.save(weights, dir)```保存。
     <br>
     
 + evaluate(): 测试模型
