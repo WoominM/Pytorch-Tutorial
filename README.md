@@ -90,9 +90,9 @@ class CustomDataset(torch.utils.data.Dataset):
 + __ getitem __ : 返回idx对应的样本  
 
 另外还可以自行定义别的函数，如```topk```或```getshape```等。其中```getshape```是用来计算模型的参数量以及FLOPs。
-    <br> <br> 
+    <br>   
     
-提取时需要定义提取器 ```torch.utils.data.DataLoader```。
+提取数据时需要定义提取器 ```torch.utils.data.DataLoader```。
 <br><br>
 _Example)_
 ```python
