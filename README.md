@@ -81,7 +81,7 @@ class CustomDataset(torch.utils.data.Dataset):
         size = self.x_data[0].size()
         return list(size)
 ```
-```torchvision.dataset```里已有常用的图像数据集，本代码将采用其中的MNIST数据集。<br>
+```torchvision.dataset```里已有常用的图像数据集，本代码默认采用其中的MNIST数据集。<br>
 若需要用自己的Dataset进行训练，把```class```定义为 ```torch.utils.data.Dataset``` 的子类。  
 <br>
 里面需要设置：
