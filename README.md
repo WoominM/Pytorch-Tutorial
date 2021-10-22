@@ -403,7 +403,9 @@ class Processor():
             weights = OrderedDict([[k.split('module.')[-1], v.cuda(output_device)] for k, v in weights.items()])
             self.model.load_state_dict(weights)
     ```
-    加载```model.py```里定义的模型。  
+    加载```model.py```里定义的模型。<br>
+    用```.cuda```可以放进GPU。<br>  
+    常用的loss方程都在```torch.nn```里面。<br>
     使用```thop.profile(model, (inputshape,))```可以计算模型的参数量以及FLOPs   
     若需要加载预训练模型，先用```torch.load()```加载预训练权重，再通过```.load_state_dict(weights)```复制到我们的模型，代码中对应```if args.weights:```。<br><br>
 
@@ -481,7 +483,7 @@ class Processor():
             weights = OrderedDict([[k.split('module.')[-1], v.cpu()] for k, v in state_dict.items()])
             torch.save(weights, self.args.save_dir + '/epoch_' + str(epoch+1) + '.pt')
     ```
-    ```self.model.train()```: 把模型设置为训练模式，对部分层有影响，如```Dropout```或```BN```等。<br>
+    ```self.model.train()```: 把模型设置为训练模式，对部分层有影响，如```Dropout```或```BN```等。<br>  
     主要训练代码：
     ```python
             output = self.model(data) #模型输出
