@@ -192,7 +192,7 @@ class ResBlock(nn.Module):
     + 激活函数：如果激活函数里没有可学习参数的话，可以直接做 ```x.relu()```，而不需要```init```里面定义```nn.ReLU()```之后再使用```self.relu(x)```。
     + 滑动窗口：```nn.unfold(window_size, dilation, stride, padding)```，将输出(N, window_size*C, HW)。
 
-## **Random Seed**  <br>
+# **Random Seed**  <br>
 ---
 ```python
 def init_seed(seed):
