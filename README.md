@@ -16,8 +16,8 @@
 ### Training & Testing
 + Change the file ```config.py``` on what you want
 + train : ```python main.py```<br>
-pretrained model: ```python main.py --weights <work_dir>/xxx.pt```
-+ test : ```python main.py --phase test --weights <work_dir>/xxx.pt```
+pretrained model: ```python main.py --weights <save_dir>/xxx.pt```
++ test : ```python main.py --phase test --weights <save_dir>/xxx.pt```
 
     <br>  
 
