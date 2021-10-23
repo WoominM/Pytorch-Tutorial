@@ -117,6 +117,7 @@ def bn_init(bn, scale):
     nn.init.constant_(bn.weight, scale)
     nn.init.constant_(bn.bias, 0)
 ```
+不同pytorch版本的默认权重初始化方案可见 https://github.com/pytorch/pytorch/tree/master/torch/nn/modules<br>
 ```torch.nn.init```里面包含常用的初始化方案，如:<br>
 + 均匀分布：```torch.nn.init.uniform_(tensor, a, b)```
 + 正态分布：```torch.nn.init.normal_(tensor, mean, std)```
@@ -204,7 +205,7 @@ def init_seed(seed):
     torch.backends.cudnn.deterministic = True # 找出最优的卷积算法，保证复现性
     torch.backends.cudnn.benchmark = False # cudnn加速，网络结构固定时才有效
 ```
-训练之前固定随机种子，这样才能保证在同一机器上的复现性，但训练时间会变慢。随着不同pytorch版本，它的优化结果也会发生变化。
+训练之前固定随机种子，这样才能保证在同一机器上的复现性，但训练时间会变慢。
 
 # **Paser**  <br>
 ---
