@@ -117,6 +117,15 @@ def conv_init(conv):
 def bn_init(bn, scale):
     nn.init.constant_(bn.weight, scale)
     nn.init.constant_(bn.bias, 0)
+
+class model(nn.Module):
+    def __init__(self):
+        ...
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                conv_init(m)
+            elif isinstance(m, nn.BatchNorm2d):
+                bn_init(m, 1)
 ```
 方法2：<br>
 ```python
