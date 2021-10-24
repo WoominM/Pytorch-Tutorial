@@ -147,7 +147,7 @@ class model(nn.Module):
         ...
         self.apply(weights_init)
 ```
-不同pytorch版本的默认权重初始化方案可见 https://github.com/pytorch/pytorch/tree/master/torch/nn/modules<br>
+不同pytorch版本的默认权重初始化方案也不同，具体可见 https://github.com/pytorch/pytorch/tree/master/torch/nn/modules<br>
 ```torch.nn.init```里面包含常用的初始化方案，如:<br>
 + 均匀分布：```torch.nn.init.uniform_(tensor, a, b)```
 + 正态分布：```torch.nn.init.normal_(tensor, mean, std)```
