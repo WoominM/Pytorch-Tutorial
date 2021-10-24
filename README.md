@@ -220,7 +220,7 @@ class ResBlock(nn.Module):
     + 维度换位：```x.permute(*dimlist)```。注意```permute```之后```tensor```将变成不连续，因此一般与```contiguous()```一起使用，如：```x.permute(0,1,3,2).contiguous()```。
     + 合并：```torch.cat([x1,x2,...], dim)```
     + 分割：```torch.split(x, [n1,n2,...], dim)``` or ```torch.chunk(x, n, dim)```
-    + 激活函数：如果激活函数里没有可学习参数的话，可以直接做 ```x.relu()```，而不需要```init```里面定义```nn.ReLU()```之后再使用```self.relu(x)```。
+    + 激活函数：如果激活函数里没有可学习参数的话(如Relu），可以直接做 ```x.relu()```，而不需要```init```里面定义```nn.ReLU()```之后再使用```self.relu(x)```。
     + 滑动窗口：```nn.unfold(window_size, dilation, stride, padding)```，将输出```(N, window_size*C, H*W)```。
     + 另外变形操作可以参考 ```from einops import rearrange```，功能强大。
 
