@@ -152,7 +152,7 @@ class model(nn.Module):
 + 均匀分布：```torch.nn.init.uniform_(tensor, a, b)```
 + 正态分布：```torch.nn.init.normal_(tensor, mean, std)```
 + 常数：```torch.nn.init.constant_(tensor, val)```
-+ Xavier/Kaiming：```uniform_```或```normal_```前面加```xavier_```或```kaiming_```即可   
++ Xavier/Kaiming：```uniform_```或```normal_```前面加```xavier_```或```kaiming_```即可, 注意参数```mode='fan_out'```指的是weights的方差在反向传播中保持不变，而默认值是 ```mode='fan_in'```，即weights的方差在前向传播中保持不变。  
 <br><br>
 
 ### Module
