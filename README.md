@@ -337,7 +337,7 @@ def get_parser():
 ```
 各参数解释可见help
 
-## **Functional**  <br>
+# **Functional**  <br>
 ---
 ```python
 def str2bool(v):
@@ -360,7 +360,7 @@ def import_class(import_str):
 + str2bool: 输出True or False。   
 + import_class: 加载模型, 可见processor模块的load_model函数
 
-# **Process**  <br>
+# **Processor**  <br>
 ---
 processor模块功能：加载数据和模型，训练，测试。  
     <br>
