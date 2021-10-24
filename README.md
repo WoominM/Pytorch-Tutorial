@@ -132,6 +132,7 @@ def weights_init(m):
             m.weight.data.normal_(1.0, 0.02)
         if hasattr(m, 'bias') and m.bias is not None:
             m.bias.data.fill_(0)
+            
 class model(nn.Module):
     def __init__(self):
         ...
