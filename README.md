@@ -1,7 +1,7 @@
 # **Introduction**  <br>
-**< Pytorch Tutorial >**
+**< Pytorch Tutorial >**<br>
 This repository is written for VCLab members.
-<br><br>
+<br>
 
 ### Prerequisites
 + python
